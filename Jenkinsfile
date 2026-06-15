@@ -21,9 +21,7 @@ pipeline {
 			}
 		stage('Run application'){
 			steps{
-				sh '''
-				nohup java -jar target/myselenium8-1.0-SNAPSHOT.jar > app.log 2>&1 &
-				'''
+				sh'nohup java -jar target/myselenium8-1.0-SNAPSHOT.jar'
 				}
 			}
 		}
