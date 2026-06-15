@@ -21,7 +21,9 @@ pipeline {
 			}
 		stage('Run application'){
 			steps{
-				sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
+				sh '''
+				nohup java -jar target/myselenium8-1.0-SNAPSHOT.jar > app.log 2>&1 &
+				'''
 				}
 			}
 		}
