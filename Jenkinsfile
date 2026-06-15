@@ -21,7 +21,7 @@ pipeline {
 			}
 		stage('Run application'){
 			steps{
-				sh 'java -jar target/myselenium8-1.0-SNAPSHOT.jar'
+				sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
 				}
 			}
 		}
